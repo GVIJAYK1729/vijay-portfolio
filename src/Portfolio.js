@@ -1,85 +1,125 @@
 import React from 'react';
 
-export default function Portfolio() {
-  return (
-    <div className="max-w-5xl mx-auto p-6 text-gray-800 font-sans">
-      <header className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-blue-700">VIJAY KUMAR GUNDLA</h1>
-        <p className="text-lg"> Summary </p>
-        <p>📍 Tirupati, India | 📞 +91 9502200798 | ✉️ gundlavijaykumar.24@gmail.com</p>
-        <a className="text-blue-600 underline" href="https://linkedin.com/in/vijay-kumar-gundla-1a54bb1a6" target="_blank">LinkedIn Profile</a>
-      </header>
+// Main App component that renders the resume
+const App = () => {
+    return (
+        <div className="bg-gray-100 min-h-screen py-8">
+            <div className="container mx-auto bg-white p-8 md:p-10 rounded-xl shadow-lg border border-gray-200">
+                {/* Contact Information */}
+                <header className="text-center mb-8 pb-6 border-b-2 border-gray-200">
+                    <h1 className="text-gray-900 text-4xl font-bold leading-tight tracking-tight mb-2">VIJAY KUMAR GUNDLA</h1>
+                    <p className="text-gray-600 text-base mb-3">Tirupati, Andhra Pradesh, India</p>
+                    <div className="contact-info text-sm text-gray-700 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                        <p>Email: <a href="mailto:gundlavijaykumar.24@gmail.com" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">gundlavijaykumar.24@gmail.com</a></p>
+                        <p>Phone: 8919794452</p>
+                        <p>LinkedIn: <a href="https://linkedin.com/in/vijay-kumar-gundla-1a54bb1a6" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">linkedin.com/in/vijay-kumar-gundla-1a54bb1a6</a></p>
+                        <p>GitHub: <a href="https://github.com/GVIJAYK1729" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors duration-200">github.com/GVIJAYK1729</a></p>
+                    </div>
+                </header>
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-2">About Me</h2>
-        <p>
-          Innovative and detail-oriented Front-End Developer with 3.7+ years of experience designing, developing,
-          and optimizing high-performance web applications. Proficient in React, JavaScript, TypeScript, HTML, CSS,
-          and modern UI frameworks. Known for enhancing user engagement and collaborating effectively within Agile teams.
-        </p>
-      </section>
+                {/* Summary */}
+                <section className="mb-8">
+                    <h2 className="text-gray-800 text-2xl font-bold border-b-2 border-gray-200 pb-3 mb-5 mt-9">SUMMARY</h2>
+                    <p className="text-gray-700 leading-relaxed">Front-end web developer with 3.7+ years of proven experience designing and implementing user-friendly, high-performance web applications. Skilled in HTML, CSS, JavaScript, TypeScript, React, and modern frameworks. Adept at collaborating with cross-functional teams in Agile environments to deliver solutions that drive customer engagement and satisfaction. Strengths include web optimization, leading UI redesigns, and technical leadership.</p>
+                </section>
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-2">Technical Skills</h2>
-        <ul className="list-disc list-inside">
-          <li><strong>Languages:</strong> HTML5, CSS3, JavaScript, TypeScript, Java, C</li>
-          <li><strong>Frameworks/Libraries:</strong> React, React Native, Node.js, Angular, AEM</li>
-          <li><strong>Databases:</strong> MongoDB</li>
-          <li><strong>Tools:</strong> Git, Jira, Zeplin, Agile/Scrum</li>
-          <li><strong>Other:</strong> Responsive Design, Cross-Browser Compatibility, Web Performance Optimization</li>
-        </ul>
-      </section>
+                {/* Skills - Optimized for compactness */}
+                <section className="mb-8">
+                    <h2 className="text-gray-800 text-2xl font-bold border-b-2 border-gray-200 pb-3 mb-5 mt-9">SKILLS</h2>
+                    <div className="text-gray-700">
+                        <p className="mb-2"><span className="font-semibold text-gray-700">Languages:</span> HTML, CSS, JavaScript, TypeScript</p>
+                        <p className="mb-2"><span className="font-semibold text-gray-700">Frameworks & Libraries:</span> React, React Native</p>
+                        <p className="mb-2"><span className="font-semibold text-gray-700">Tools & Platforms:</span> Git, GitHub, Node.js</p>
+                        <p className="mb-2"><span className="font-semibold text-gray-700">Databases:</span> MongoDB</p>
+                        <p className="mb-2"><span className="font-semibold text-gray-700">Methodologies:</span> Agile, Scrum</p>
+                        <p className="mb-0"><span className="font-semibold text-gray-700">Soft Skills:</span> Analytical thinking, Leadership, Teamwork</p>
+                    </div>
+                </section>
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-2">Professional Experience</h2>
-        <div>
-          <h3 className="font-semibold">Capgemini, Bangalore — Web Developer</h3>
-          <p className="italic mb-2">Dec 2021 – Present</p>
-          <ul className="list-disc list-inside">
-            <li>Developed responsive web apps using React, HTML, CSS, and JavaScript</li>
-            <li>Collaborated with UI/UX teams to enhance interface quality and accessibility</li>
-            <li>Ensured cross-browser compatibility and performance optimization</li>
-            <li>Practiced Agile Scrum with sprint planning, daily stand-ups, and retrospectives</li>
-          </ul>
+                {/* Experience */}
+                <section className="mb-8">
+                    <h2 className="text-gray-800 text-2xl font-bold border-b-2 border-gray-200 pb-3 mb-5 mt-9">EXPERIENCE</h2>
+                    <div className="mb-7 pb-2 border-b border-dashed border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                        <div className="flex justify-between items-baseline mb-1">
+                            <h3 className="text-lg font-semibold text-gray-700">Sr Software Engineer / Web Developer</h3>
+                            <span className="text-sm text-gray-600 font-medium">Dec 2021 – Present</span>
+                        </div>
+                        <p className="text-gray-700 font-medium mb-2">Capgemini | <span className="text-gray-600">Bangalore, India</span></p>
+                        <ul className="list-disc ml-6 text-gray-700">
+                            <li>Redesigned a major client e-commerce platform (Dentsply Sirona), leading to increased user engagement and customer satisfaction.</li>
+                            <li>Integrated advanced technologies, reducing site load time and improving performance.</li>
+                            <li>Collaborated with UX/UI teams to deliver intuitive and accessible interfaces.</li>
+                            <li>Ensured project delivery with a focus on cross-browser compatibility and responsive design.</li>
+                            <li>Led legacy system modernization, boosting engagement metrics through current technologies.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* Key Projects */}
+                <section className="mb-8">
+                    <h2 className="text-gray-800 text-2xl font-bold border-b-2 border-gray-200 pb-3 mb-5 mt-9">KEY PROJECTS</h2>
+                    <div className="mb-7 pb-2 border-b border-dashed border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                        <div className="flex justify-between items-baseline mb-1">
+                            <h3 className="text-lg font-semibold text-gray-700">Dentsply Sirona (E-commerce Platform)</h3>
+                        </div>
+                        <ul className="list-disc ml-6 text-gray-700">
+                            <li>Led UI development using React, HTML, CSS, and JavaScript.</li>
+                            <li>Collaborated with design teams for optimal UX and visual consistency.</li>
+                            <li>Applied web performance best practices and achieved cross-browser compatibility.</li>
+                            <li>Developed new features that increased user engagement and contributed to sales growth.</li>
+                        </ul>
+                    </div>
+                    <div className="mb-7 pb-2 border-b border-dashed border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                        <div className="flex justify-between items-baseline mb-1">
+                            <h3 className="text-lg font-semibold text-gray-700">DeVry University (Online Learning Platform)</h3>
+                        </div>
+                        <ul className="list-disc ml-6 text-gray-700">
+                            <li>Developed and maintained web pages (HTML, CSS, JavaScript) to enhance online learning.</li>
+                            <li>Improved interface designs in collaboration with senior developers and designers.</li>
+                            <li>Provided ongoing support, debugging, and agile scrum updates.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* Certifications */}
+                <section className="mb-8">
+                    <h2 className="text-gray-800 text-2xl font-bold border-b-2 border-gray-200 pb-3 mb-5 mt-9">CERTIFICATIONS</h2>
+                    <ul className="list-disc ml-6 text-gray-700">
+                        <li>Animation with JavaScript and jQuery – University of California, Davis</li>
+                        <li>React Native – Coursera, Meta (2025)</li>
+                        <li>Agile Software Development – University of Minnesota / Capgemini (2022)</li>
+                        <li>Scrum (Software Development)</li>
+                    </ul>
+                </section>
+
+                {/* Education */}
+                <section>
+                    <h2 className="text-gray-800 text-2xl font-bold border-b-2 border-gray-200 pb-3 mb-5 mt-9">EDUCATION</h2>
+                    <div className="mb-7 pb-2 border-b border-dashed border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                        <div className="flex justify-between items-baseline mb-1">
+                            <h3 className="text-lg font-semibold text-gray-700">Bachelor of Technology (Computer Science & Engineering)</h3>
+                            <span className="text-sm text-gray-600 font-medium">2021</span>
+                        </div>
+                        <p className="text-gray-700 font-medium mb-2">Jawaharlal Nehru Technological University, Anantapur, India</p>
+                        <ul className="list-disc ml-6 text-gray-700">
+                            <li>CGPA: 8.0 (80%), First rank in academic year</li>
+                        </ul>
+                    </div>
+                    <div className="mb-7 pb-2 border-b border-dashed border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                        <div className="flex justify-between items-baseline mb-1">
+                            <h3 className="text-lg font-semibold text-gray-700">Intermediate (M.P.C, 95%)</h3>
+                            <span className="text-sm text-gray-600 font-medium">2017</span>
+                        </div>
+                        <p className="text-gray-700 font-medium mb-2">Sri Gayatri Jr College, Tirupati</p>
+                        <ul className="list-disc ml-6 text-gray-700">
+                            <li>Student of the Year Award</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
         </div>
-        <div className="mt-4">
-          <h4 className="font-semibold">Key Projects</h4>
-          <ul className="list-disc list-inside">
-            <li><strong>Dentsply Sirona:</strong> Created e-commerce UI features that boosted engagement and satisfaction</li>
-            <li><strong>DeVry University:</strong> Refined online learning UI, improved accessibility, and reduced bugs</li>
-          </ul>
-        </div>
-      </section>
+    );
+};
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-2">Education</h2>
-        <ul className="list-disc list-inside">
-          <li><strong>B.Tech (CSE)</strong> – JNTU Anantapur, 2021 | CGPA: 8.0</li>
-          <li><strong>Intermediate (MPC)</strong> – Sri Gayatri Jr College, Tirupati, 2017 | Marks: 95%</li>
-        </ul>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-2">Certifications</h2>
-        <ul className="list-disc list-inside">
-          <li>React Native – Meta / Coursera – 2025</li>
-          <li>Animation with JavaScript – UC Davis / Coursera – 2025</li>
-          <li>JavaScript Programming Essentials – IBM / Coursera – 2025</li>
-          <li>JavaScript Basics – UC Davis / Coursera – 2023</li>
-          <li>Agile Software Development – University of Minnesota – 2022</li>
-          <li>Agile with Jira – Atlassian / Capgemini – 2022</li>
-          <li>Communication Strategies – University of Minnesota – 2023</li>
-          <li>English for Effective Business Speaking – HKUST – 2023</li>
-        </ul>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-2">Project Links</h2>
-        <ul className="list-disc list-inside">
-          <li><a className="text-blue-500 underline" href="https://www.dentsplysirona.com/en-us" target="_blank">Dentsply Sirona</a></li>
-          <li><a className="text-blue-500 underline" href="https://www.devry.edu" target="_blank">DeVry University</a></li>
-        </ul>
-      </section>
-    </div>
-  );
-}
+export default App;
+git add src/Portfolio.js
